@@ -1,19 +1,38 @@
 ---
 import Page from '../../layouts/page.astro';
-
-export function getStaticPaths () {
- return [
-    {params: {lang: 'en', version: 'v1'}},
-    {params: {lang: 'fr', version: 'v2'}},
-  ];
-}
-
-const { lang, version } = Astro.params;
+import Card from '../../components/Card.astro';
 ---
 
-<Page title="Project">
-	<main transition:animate="fade">
-    <h1 class="text-gradient">Project</h1>
+<Page title="Design">
+	<main transition:animate="slide">
+		
+		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<p class="instructions">
+			To get started, open the directory <code>src/pages</code> in your project.<br />
+			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+        href="https://bing.com"
+				title="Documentation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			<Card
+        href="/home"
+				title="Integrations"
+				body="Supercharge your project with new frameworks and libraries."
+			/>
+			<Card
+        href="/home"
+				title="Themes"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="/home"
+				title="Community"
+				body="Come say hi to our amazing Discord community. ❤️"
+			/>
+		</ul>
 	</main>
 </Page>
 

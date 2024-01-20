@@ -1,20 +1,51 @@
 ---
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+interface Props {}
 ---
 
 <div class="v-header-view">
-	<h2>{title}</h2>
+  <img class="app-logo" src="/favicon.svg"/>
+	<span class="app-name">Design</span>
+  <div style="flex: 1" />
+  <span class="header-item">Home</span>
+  <span class="header-item">Android</span>
+  <span class="header-item">Node</span>
+  <span class="header-item">React</span>
+  <span class="header-item">Java</span>
+  <span class="header-item">Js</span>
+  <span class="header-item">Ts</span>
+  <span class="header-item">Mysql</span>
 </div>
 <style>
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
 	.v-header-view {
-		background-position: 0;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    background-color: rgba(0, 0, 0, 1);
 	}
+  .app-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  .app-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+  }
+  .header-item {
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+  }
+  .header-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .header-item:active {
+    color: white;
+  }
 </style>
