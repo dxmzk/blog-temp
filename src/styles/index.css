@@ -1,0 +1,10 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+
+  font-size: 14px;
+  color: #232323;
+  font-family: PingFang SC;
+}

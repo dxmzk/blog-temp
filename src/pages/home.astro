@@ -1,12 +1,20 @@
 ---
-import Page from '../../layouts/page.astro';
-import Project from '../../components/layout/project/index';
+import Page from '../layouts/page.astro';
+import Home from '../components/layout/home/index.jsx';
 
+export function getStaticPaths () {
+ return [
+    {params: {lang: 'en', version: 'v1'}},
+    {params: {lang: 'fr', version: 'v2'}},
+  ];
+}
+
+const { lang, version } = Astro.params;
 ---
 
-<Page title="Project">
+<Page title="Home">
 	<main transition:animate="fade">
-    <Project client:only="react" />
+    <Home client:only="react" />
 	</main>
 </Page>
 

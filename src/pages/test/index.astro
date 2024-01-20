@@ -1,6 +1,5 @@
 ---
 import Page from '../../layouts/page.astro';
-import Home from '../../components/page/home/index.jsx';
 
 export function getStaticPaths () {
  return [
@@ -12,9 +11,9 @@ export function getStaticPaths () {
 const { lang, version } = Astro.params;
 ---
 
-<Page title="Home">
+<Page title="Project">
 	<main transition:animate="fade">
-    <Home client:only="react" />
+    <h1 class="text-gradient">Project</h1>
 	</main>
 </Page>
 
