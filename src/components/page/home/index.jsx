@@ -6,7 +6,7 @@
  */
 import React from 'react';
 
-function Home() {
+function Home(props) {
   return (
     <div>
       <h1 onClick={() => alert('12345678')}>Home</h1>

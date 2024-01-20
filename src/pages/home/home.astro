@@ -1,6 +1,6 @@
 ---
-import Index from '../../layouts/index.astro';
-import Home from '../../components/home/index.jsx';
+import Page from '../../layouts/page.astro';
+import Home from '../../components/page/home/index.jsx';
 
 export function getStaticPaths () {
  return [
@@ -12,11 +12,11 @@ export function getStaticPaths () {
 const { lang, version } = Astro.params;
 ---
 
-<Index title="Welcome to Astro.">
+<Page title="Home">
 	<main transition:animate="fade">
     <Home client:only="react" />
 	</main>
-</Index>
+</Page>
 
 <style>
 	main {
